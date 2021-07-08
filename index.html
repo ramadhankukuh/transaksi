@@ -66,3 +66,17 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $('#tabelData').DataTable();
+	    function filterData () {
+		    $('#tabelData').DataTable().search(
+		        $('.jenis_kelamin').val()
+		    	).draw();
+		}
+		$('.jenis_kelamin').on('change', function () {
+	        filterData();
+	    });
+	});
+</script>
